@@ -6,8 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-         
-        game();
+         game();
+         function game() {
+            var userSide=0;
+            var compSide=0;
+            var i =0
+             do{
+                var computerResult = getComputerInput();
+                var userResult = getUserInput();  
+                var roundWinner = round(computerResult,userResult);
+                console.log(`user choice is = ${userResult}`);
+                console.log(`computer choice is = ${computerResult}`);
+                console.log(roundWinner);
+                if(roundWinner=="user")
+                {
+                 userSide += 1;
+                }
+                if(roundWinner=="comp")
+                {
+                   compSide+=1;
+                }
+                i++;
+             } while (i<5);
+            if(userSide>compSide)
+            {
+                console.log("winner is user");
+            }
+            if(compSide>userSide)
+            {
+                console.log("winner is comp");  
+            }
+            else
+            {
+                console.log("match is tie");
+            }
+        }
        function getComputerInput()
        { 
         const currentTime= new Date();
@@ -57,41 +90,6 @@
                 
             }
         }
-           function game() {
-            var userSide=0;
-            var compSide=0;
-            var i =0
-             do {
-                var computerResult = getComputerInput();
-                var userResult = getUserInput();  
-                var roundWinner = round(computerResult,userResult);
-                console.log(`user choice is = ${userResult}`);
-                console.log(`computer choice is = ${computerResult}`);
-                console.log(roundWinner);
-                if(roundWinner=="user")
-                {
-                 userSide += 1;
-                }
-                if(roundWinner=="comp")
-                {
-                   compSide+=1;
-                }
-                i++;
-             } while (i<5);
-            if(userSide>compSide)
-            {
-                console.log("winner is user");
-            }
-            if(compSide>userSide)
-            {
-                console.log("winner is comp");  
-            }
-            else
-            {
-                console.log("match is tie");
-            }
-        }
-        
     </script>
 </head>
 <body>
