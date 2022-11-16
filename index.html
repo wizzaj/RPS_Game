@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <script>
+         
+        game();
+       function getComputerInput()
+       { 
+        const currentTime= new Date();
+        let num = currentTime.getMilliseconds()%10;
+        if(num>=0 && num<=3)
+        {   
+            return "paper";
+        }
+        if(num>=4 && num<=6)
+        {
+            return "rock";
+        }
+        if(num>=7 && num<=9)
+        {   
+            return "scissor";
+        }
+       }
+       function getUserInput() { 
+         const value = prompt("type rock or paper or scissor");
+         return value;
+       }
+       function round(computerResult,userResult)
+        {
+            switch (userResult)
+            { 
+                case "paper":
+                    if(computerResult=="rock")
+                       return "user";
+                    if(computerResult=="scissor")
+                    return "comp";
+                    if(computerResult=="paper")
+                    return "tie";
+                case "rock":
+                    if(computerResult=="rock")
+                    return "tie";
+                     if(computerResult=="scissor")
+                     return "user";
+                    if(computerResult=="paper")
+                    return "comp";
+                case "scissor":
+                    if(computerResult=="rock")
+                    return "comp";
+                    if(computerResult=="scissor")
+                    return "tie";
+                    if(computerResult=="paper")
+                    return "user";
+                
+            }
+        }
+           function game() {
+            var userSide=0;
+            var compSide=0;
+            var i =0
+             do {
+                var computerResult = getComputerInput();
+                var userResult = getUserInput();  
+                var roundWinner = round(computerResult,userResult);
+                console.log(`user choice is = ${userResult}`);
+                console.log(`computer choice is = ${computerResult}`);
+                console.log(roundWinner);
+                if(roundWinner=="user")
+                {
+                 userSide += 1;
+                }
+                if(roundWinner=="comp")
+                {
+                   compSide+=1;
+                }
+                i++;
+             } while (i<5);
+            if(userSide>compSide)
+            {
+                console.log("winner is user");
+            }
+            if(compSide>userSide)
+            {
+                console.log("winner is comp");  
+            }
+            else
+            {
+                console.log("match is tie");
+            }
+        }
+        
+    </script>
+    
+</body>
+</html>
