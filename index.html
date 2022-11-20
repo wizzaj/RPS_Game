@@ -4,94 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
-    <script>
-         game();
-         function game() {
-            var userSide=0;
-            var compSide=0;
-            var i =0
-             do{
-                var computerResult = getComputerInput();
-                var userResult = getUserInput();  
-                var roundWinner = round(computerResult,userResult);
-                console.log(`user choice is = ${userResult}`);
-                console.log(`computer choice is = ${computerResult}`);
-                console.log(roundWinner);
-                if(roundWinner=="user")
-                {
-                 userSide += 1;
-                }
-                if(roundWinner=="comp")
-                {
-                   compSide+=1;
-                }
-                i++;
-             } while (i<5);
-            if(userSide>compSide)
-            {
-                console.log("winner is user");
-            }
-            if(compSide>userSide)
-            {
-                console.log("winner is comp");  
-            }
-            else
-            {
-                console.log("match is tie");
-            }
-        }
-       function getComputerInput()
-       { 
-        const currentTime= new Date();
-        let num = currentTime.getMilliseconds()%10;
-        if(num>=0 && num<=3)
-        {   
-            return "paper";
-        }
-        if(num>=4 && num<=6)
-        {
-            return "rock";
-        }
-        if(num>=7 && num<=9)
-        {   
-            return "scissor";
-        }
-       }
-       function getUserInput() { 
-         const value = prompt("type rock or paper or scissor");
-         return value;
-       }
-       function round(computerResult,userResult)
-        {
-            switch (userResult)
-            { 
-                case "paper":
-                    if(computerResult=="rock")
-                       return "user";
-                    if(computerResult=="scissor")
-                    return "comp";
-                    if(computerResult=="paper")
-                    return "tie";
-                case "rock":
-                    if(computerResult=="rock")
-                    return "tie";
-                     if(computerResult=="scissor")
-                     return "user";
-                    if(computerResult=="paper")
-                    return "comp";
-                case "scissor":
-                    if(computerResult=="rock")
-                    return "comp";
-                    if(computerResult=="scissor")
-                    return "tie";
-                    if(computerResult=="paper")
-                    return "user";
-                
-            }
-        }
-    </script>
 </head>
 <body>
+    <h1 id="heading1"> ROCK-PAPER-SCISSOR </h1>
+    <div class="container">
+    <h2 id="heading2">Let's play</h2>
+<div class="buttonCollection">
+    <div class="buttons1">
+         <span class="user"> USER</span>
+         <div class="user-button">
+        <button id= 'btn' class="myBtn"><img src="./pics/rock.svg" alt="rock">Rock</button>
+        <button class="myBtn"><img src="./pics/paper.svg" alt="">Paper</button>
+        <button class="myBtn"><img src="/pics/scissor.svg" alt="">Scissor</button>    
+    </div>
+    </div>
+    <div class="buttons2">
+        <span class="computer">COMPUTER</span>
+        <div class="comp-button">
+        <button class="compBtn"><img src="./pics/rock.svg" alt="rock">Rock</button>
+        <button class="compBtn"><img src="./pics/paper.svg" alt="">Paper</button>
+        <button class="compBtn"><img src="/pics/scissor.svg" alt="">Scissor</button>    
+    </div>
+    </div>
+</div>
+    <div class="container2">
+    <div class="userCount">USER : 0/5</div>
+    <div class="compCount">COMP : 0/5</div>
+    <div class="winner">WINNER :  </div>
+</div>
+<button class="restart">Restart</button>
+</div>
+<script src="script.js"></script>
 </body>
 </html>

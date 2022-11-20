@@ -1,0 +1,94 @@
+body{
+    background-color: #1A1A1D;
+}
+#heading1 , #heading2
+{  
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+   color:#950740;
+}
+.container
+ {  
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container2
+{   
+    margin: 20px;
+    height: 30vh;
+    width: 80vw;
+    display: flex;
+    justify-content: space-evenly;   
+    align-items: center;
+}
+.buttonCollection
+{  
+   margin:40px;
+   width: 100vw;
+   height: 40vh;
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+}
+.buttons1 ,.buttons2
+{  
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   background-color: #4E4E50;
+   height: 50vh;
+   border-radius: 30px;
+}
+ .user , .computer
+ {
+    font-size: 30px;
+    margin-bottom: 30px;
+    color:#66fcf1;
+ }
+.userCount,.compCount,.winner
+{
+height: 40px;
+width: 50vw;
+color: #C3073F;
+font-size: 30px;
+}
+.myBtn ,.compBtn ,.restart
+ {
+  margin: 20px;
+  margin-bottom: 80px;
+  width: 10vw;
+  height: 20vh;
+  background-color:#5cdb95 ;
+  color:#c96717;
+  font-size: 25px;
+  border-radius: 30px;
+} 
+.restart
+{
+    cursor: pointer;
+    transform: scale(1.1); 
+    border-color: red;
+    box-shadow: 0 0 1rem red;
+}
+img{
+    border-radius: 100%;
+}
+.Selection
+{
+    cursor: pointer;
+    transform: scale(1.1); 
+    border-color: red;
+    box-shadow: 0 0 1rem red;
+}
+.myBtn
+{
+    cursor: pointer;
+}
+
+
