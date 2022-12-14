@@ -50,7 +50,7 @@ body{
 }
 .buttons1,.buttons2
 {  
-   padding: 30px;
+   padding: 10px;
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -68,21 +68,21 @@ body{
 }
  .user , .computer
  {
-    font-size: 30px;
+    font-size: 25px;
     margin-top: 10px;
     color:#66fcf1;
  }
 .myBtn ,.compBtn 
  {
    width:20%;
-   margin: 5px;
+   margin: 15px 5px 5px 5px;
    display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   background-color:#5cdb95 ;
   color:#e42873;
-  border-radius: 8px;
+  border-radius: 15px;
   text-align: center;
 } 
 .myBtn>img,.compBtn>img
@@ -107,6 +107,7 @@ body{
 img{
     border-radius: 100%;
     background-color: bisque;
+    margin-top: 5px;
 }
 .Selection
 {
@@ -116,7 +117,7 @@ img{
     box-shadow: 0 0 1rem bisque;
 }
 .myBtn
-{
+{   
     cursor: pointer;
 }
 .winner
@@ -127,5 +128,9 @@ img{
     font-weight: bolder;
     
 }
-
+.myBtn > span , .compBtn>span
+{
+ padding:10px;
+ font-size: 12px;
+}
 
