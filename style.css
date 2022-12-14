@@ -44,7 +44,6 @@ body{
    
    display: flex;
    width: 100vw;
-   min-width: 50%;
    justify-content: space-evenly;
    align-items: center;
    margin-top: 10px;
@@ -58,13 +57,14 @@ body{
    justify-content: center;
    background-color: #4E4E50;
    border-radius: 30px;
-   max-width: 45vw;
-   min-width: 45vw;
+   width: 45%;
+   
 }
 .user-button,.comp-button
 {
     display: flex;
-    padding: 40px;
+    display: 100%;
+    justify-content: center;
 }
  .user , .computer
  {
@@ -74,16 +74,15 @@ body{
  }
 .myBtn ,.compBtn 
  {
-  max-width: 100%;
-  min-width: 20%;
-  display: flex;
-  margin: 5px;
+   width:20%;
+   margin: 5px;
+   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   background-color:#5cdb95 ;
   color:#e42873;
-  border-radius: 20px;
+  border-radius: 8px;
   text-align: center;
 } 
 .myBtn>img,.compBtn>img
@@ -91,13 +90,6 @@ body{
     width: 100%;
     padding: 5px;
 }
- .myBtn>span,.compBtn>span
- {
-  width: 100%;
-  margin-bottom: 3px;
-  padding: 5px
- }
-
 .restart
 {
     background-color: darkcyan;
