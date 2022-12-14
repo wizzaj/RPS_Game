@@ -44,8 +44,9 @@ function game() {
     if (roundCount ===5)
     {  
         pickWinner(userWinCount,compWinCount); 
+        isGameOver();
     }
-    isGameOver();
+   
 }  
   function play(computerChoice,userChoice)
   {
